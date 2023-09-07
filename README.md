@@ -10,7 +10,7 @@ Simulation code based on references in the literature:
 
 i) "S_Simulation_twoCompartmens_PCbSSFP.m":
 
-Contains the main code. By changing the parameter "Is_Sigma0" the effect of different phase sign description can be investigated in two-compartment systems. 
+Contains the main code. By changing the parameter "Is_Sigma_0" the effect of different phase sign description can be investigated in two-compartment systems. 
 These different parameterizations are based on different published works. 
 The comparison of these models with different descriptions is performed using this code. 
 The code implements physical values like T1,T2,... and applies superposition principle "Stot=S1+S2" of complex values for the respective single compartment signals, 
