@@ -45,6 +45,6 @@ function profile = S_bSSFP_Sigma_0(M0,T1,T2,alpha,phi,TR,TE,deltaCS,dB0,B0)
         c = 2*(E1-1)*E2*cos(alpha/2)^2;
         % Note: the first exponent theta has opposite sign to the second exponent theta 
         % i.e. ~(1-E2*exp(-1i*(theta-phi)))*exp(1i*theta*TE/TR) is
-        % MINUS/PLUS in contrast to the aligned function
+        % MINUS/PLUS in contrast to the sigma=-1 function
         profile = -1i*a/(b+c*cos(theta-phi))*(1-E2*exp(-1i*(theta-phi)))*exp(-TE/T2)*exp(1i*theta*TE/TR); 
 end
