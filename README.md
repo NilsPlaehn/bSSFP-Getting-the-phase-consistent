@@ -6,7 +6,8 @@ Contains Matlab code to simulate phase-cycled bSSFP profiles of two-compartment 
 
 #Codes: 
 
-Simulation code based on references in the literature :
+Simulation code based on references in the literature:
+
 i) "S_Simulation_twoCompartmens_PCbSSFP.m":
 
 Contains the main code. By changing the parameter "Is_Sigma0" the effect of different phase sign description can be investigated in two-compartment systems. 
