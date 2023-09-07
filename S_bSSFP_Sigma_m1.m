@@ -62,8 +62,8 @@ function profile = S_bSSFP_Sigma_m1(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
  
         % Note: the first exponent theta0 has the same sign to the second exponent phi=theta0*TE/TR 
         % i.e. ~(1-E2*exp(1i*(theta0-phiPC)))*exp(1i*theta0*TE/TR) is
-        % PLUS/PLUS in contrast to the opposite sign function
-        % The sign of phiPC is negative in contrast to the opposite sign function
+        % PLUS/PLUS in contrast to the sigma=0 function
+        % The sign of phiPC is negative in contrast to the sigma=0 function
         % This does not lead to different shapes of the trajectory as can be checked
         % by an inversion of the phiPC sign 
         profile = Meff.*(1-a.*exp(1i.*theta))./(1-b.*cos(theta)).*exp(1i.*phi); 
