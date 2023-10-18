@@ -1,4 +1,4 @@
-function profile = S_bSSFP_Sigma_m1(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
+function profile = S_bSSFP_Case2(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
 % Description: generation of PC-bSSFP profiles for aligned signs
 
 % Author of function: 
@@ -40,8 +40,18 @@ function profile = S_bSSFP_Sigma_m1(M0,T1,T2,alpha,phiPC,TR,TE,deltaCS,dB0,B0)
         % to zero for this simulation. 
         % tot = tot.*exp(-1i.*angle(mean(tot))) is performed in the main code to
         % correct for this arbitrariness anyway
-        phi         = gamma*(dB0+deltaCS*B0)*TE;
-        theta0      = gamma*(dB0+deltaCS*B0)*TR;
+
+        %% "the off-resonance caused by local field deviations" is defined with a plus in contrast to bloch equations
+        %% So in order to be consistent with the papers theta definition I choose a minus sign here instead:
+        IS_theta_minus = true;  % changing to false only mirrors the profiles
+        if IS_theta_minus == true
+            phi         = -gamma*(dB0+deltaCS*B0)*TE;
+            theta0      = -gamma*(dB0+deltaCS*B0)*TR;
+        else % if this is chosen it would only correspond to a complex conjugation/mirroring of profile
+            phi         = gamma*(dB0+deltaCS*B0)*TE;
+            theta0      = gamma*(dB0+deltaCS*B0)*TR;
+        end
+
         % note: The sampling of phiPC in paper(i) starts at 180°, while other paper
         % start at 0° which is however not affecting the resulting profile shapes
         theta       = theta0-phiPC; 
