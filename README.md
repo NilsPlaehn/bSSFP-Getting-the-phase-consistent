@@ -20,6 +20,10 @@ ii) "S_bSSFP_Sigma_m1.m":
 
 Contains a aligned phase-sign parameterization based on published work.
 
+
+Experimental Data can be found: 
+https://zenodo.org/records/10017784?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjMzNGFhNGZmLTQ0ODEtNDdjZS1hMzhjLTE1ZDEwNjY4N2RhZCIsImRhdGEiOnt9LCJyYW5kb20iOiIwMjg2YmNlNmUxNjdhZDRmNWY2Y2NjMWU0YjJlZjU3ZCJ9.B9PFbr3weTgOqolpieMDZ0ZW4gPlX13sIfN39vtHV1KYhGrs0DW7UuG7A28tbnkm3-_Mh7ecibqTd_lLcppxXQ
+
 iii) "S_bSSFP_Sigma_0.m":
 
 Contains a anti-aligned phase-sign parameterization based on published work .
