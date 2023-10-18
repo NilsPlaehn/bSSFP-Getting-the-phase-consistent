@@ -81,13 +81,14 @@ dB0     = 1000*randn(1);      % Also arbitrary: does not lead to a difference of
                               % rotation of points onto the same trajectory
 B0      = 2.89;               % Experimental value
 fPD     = 0.6;                % Experimental value
-                              % Note: Only if fPD=0 or fPD=1 is chosen the boolian "Is_Sigma_0" delivers for "true" and "false" equal elliptical trajectories
-
+                             
 % 3) Sampling of different repetition times TR
 TR_exp     = [3.4,3.62,4.11,4.62,4.84,5.14]/1000;  % Experimental value
 nTR        = numel(TR_exp); 
-% 4) Choose whether sigma=0 or sigma=-1 will be simulated
-Is_Sigma_0 = true; 
+% 4) Choose whether (Ganter,Zur,Ernst,...) model is used or different phase
+% description
+Is_Ganter = true; 
+
 
 % 5) Generate superimposed signals
 bSSFP_2comp = zeros(nTR,nPC);
@@ -97,12 +98,12 @@ for indTR = 1:nTR
     profile_water = zeros(1,nPC);
     profile_Ace   = zeros(1,nPC);
     for indPC = 1:nPC
-        if Is_Sigma_0 == true
-            profile_water(indPC) = S_bSSFP_Sigma_0(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCSw,dB0,B0);
-            profile_Ace(indPC)   = S_bSSFP_Sigma_0(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS+deltaCSw,dB0,B0);
+        if Is_Ganter == true
+            profile_water(indPC) = S_bSSFP_Ganter(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCSw,dB0,B0);
+            profile_Ace(indPC)   = S_bSSFP_Ganter(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS+deltaCSw,dB0,B0);
         else
-            profile_water(indPC) = S_bSSFP_Sigma_m1(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCSw,dB0,B0);
-            profile_Ace(indPC)   = S_bSSFP_Sigma_m1(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS+deltaCSw,dB0,B0);
+            profile_water(indPC) = S_bSSFP_Case2(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCSw,dB0,B0);
+            profile_Ace(indPC)   = S_bSSFP_Case2(M0,T1,T2,alpha,phi(indPC),TR,TE,deltaCS+deltaCSw,dB0,B0);
         end
     end
     % Superposition principle
@@ -158,38 +159,6 @@ ax           = gca;
 ax.GridColor ='k';
 ax.LineWidth = 3;
 ax.FontSize  = 20; 
-
-% 8) Exported data for the note manuscript
-
-if Is_Sigma_0==true
-    if indTR == 1
-        saveas(gcf,'Note_Simulation_3p4_sigma0.png')
-    elseif indTR == 2
-        saveas(gcf,'Note_Simulation_3p62_sigma0.png')
-    elseif indTR == 3
-        saveas(gcf,'Note_Simulation_4p11_sigma0.png')
-    elseif indTR == 4
-        saveas(gcf,'Note_Simulation_4p62_sigma0.png')
-    elseif indTR == 5
-        saveas(gcf,'Note_Simulation_4p84_sigma0.png')
-    elseif indTR == 6
-        saveas(gcf,'Note_Simulation_5p14_sigma0.png')
-    end
-else
-    if indTR == 1
-        saveas(gcf,'Note_Simulation_3p4_sigmam1.png')
-    elseif indTR == 2
-        saveas(gcf,'Note_Simulation_3p62_sigmam1.png')
-    elseif indTR == 3
-        saveas(gcf,'Note_Simulation_4p11_sigmam1.png')
-    elseif indTR == 4
-        saveas(gcf,'Note_Simulation_4p62_sigmam1.png')
-    elseif indTR == 5
-        saveas(gcf,'Note_Simulation_4p84_sigmam1.png')
-    elseif indTR == 6
-        saveas(gcf,'Note_Simulation_5p14_sigmam1.png')
-    end
-end
 
 
 
