@@ -32,7 +32,9 @@ Basically the same as ""S_Simulation_twoCompartment_PCbSSFP_literature.m" but wi
 II) "S_bSSFP_General.m":
 
 bSSFP signal generation in dependence of handedness and sigma. 
-Experimental Data and Codes can be found here: 
+
+
+*) Experimental Data and Codes can be found here: 
 https://zenodo.org/records/10017784?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjMzNGFhNGZmLTQ0ODEtNDdjZS1hMzhjLTE1ZDEwNjY4N2RhZCIsImRhdGEiOnt9LCJyYW5kb20iOiIwMjg2YmNlNmUxNjdhZDRmNWY2Y2NjMWU0YjJlZjU3ZCJ9.B9PFbr3weTgOqolpieMDZ0ZW4gPlX13sIfN39vtHV1KYhGrs0DW7UuG7A28tbnkm3-_Mh7ecibqTd_lLcppxXQ
 
 If you have questions or comments on the code, on the theory, phantom or experiment, please contact plaehn.nils@web.de
