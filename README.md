@@ -1,19 +1,15 @@
-Phase-cycled bSSFP in two-compartment systems
+# Phase-cycled bSSFP in two-compartment systems
 
-Contains Matlab code to simulate phase-cycled bSSFP profiles of two-compartment systems using different sign conventions.
+Matlab code to simulate phase-cycled bSSFP profiles of two-compartment systems using different phase descriptions.
 
-#Background: The code was developed to emphasize the different predictions of different phase-signs descriptions in two-compartment systems. 
+**********
+Codes: 
 
-#Codes: 
-
-Simulation code based on references in the literature:
+Numerical simulation code based on published work:
 
 i) "S_Simulation_twoCompartment_PCbSSFP_literature.m":
 
-Contains the main code. By changing the parameter "Is_Ganter" the effect of different phase sign description can be investigated in two-compartment systems in agreement with literature. 
-The comparison of these models with different descriptions is performed using this code. 
-The code implements physical values like T1,T2,... and applies superposition principle "Stot=S1+S2" of complex values for the respective single compartment signals, 
-which are simulated in the remaining provided code.
+Contains the main code. By changing the parameter "Is_Ganter" one can visualize the effect of different phase descriptions on phase-cycled bSSFP profiles obtained in two-compartment systems. The simulation includes physical values such as T1 and T2. The simulation applies the superposition principle on single component signals.
 
 ii) "S_bSSFP_Ganter.m":
 
