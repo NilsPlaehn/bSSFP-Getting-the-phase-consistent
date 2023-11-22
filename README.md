@@ -25,6 +25,10 @@ Similar to i) "S_Simulation_twoCompartment_PCbSSFP_literature.m" but using a dif
 
 bSSFP signal generation in dependent on the coordinate system handedness and the phase description definition. 
 
+6) "BlochSImulation_Acetone_Water.m"
+
+Includes a simulation code based on Bloch equation for the iterative simulation of the same profile shapes as a possible alternative.
+
 ***********
 Experimental data and additional code can be found on the following public repository: 
 
