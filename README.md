@@ -29,15 +29,21 @@ bSSFP signal generation in dependent on the coordinate system handedness and the
 
 Includes a simulation code based on Bloch equation for the iterative simulation of the same profile shapes as a possible alternative.
 
-7) "E1_ExperimentalReadout_below4msTR"
+**********
+Matlab code to readout experimental data from acetone-water PC-bSSFP experiments
+
+**********
+Available codes: 
+
+1) "E1_ExperimentalReadout_below4msTR"
 
 Contains the readout code for PC-bSSFP experimental data found on Zenodo for TR<4ms.
 
-8) "E_ExperimentalReadout_above4msTR.m"
+2) "E_ExperimentalReadout_above4msTR.m"
 
 Contains the readout code for PC-bSSFP experimental data found on Zenodo for TR>4ms.
 
-9) "E_Spectrum_plots.m"
+3) "E_Spectrum_plots.m"
 
 Contains the readout code for spectroscopic experimental data found on Zenodo.
 
