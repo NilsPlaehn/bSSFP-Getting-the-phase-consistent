@@ -150,7 +150,7 @@ end
 
 
 function Rz = getRz(theta,phi)
-    x  = theta-phi;    
+    x  = phi-theta;    
     Rz = [[cos(x),-sin(x),0];[sin(x),cos(x),0];[0,0,1]];
 end
 
