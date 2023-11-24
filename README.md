@@ -29,6 +29,9 @@ bSSFP signal generation in dependent on the coordinate system handedness and the
 
 Includes a simulation code based on Bloch equation for the iterative simulation of the same profile shapes as a possible alternative.
 
+7) "S_B0drift.m"
+
+Schematic illustration of the effect of linear temporal variation of B0 field on the PC bSSFP profile
 **********
 Matlab code to readout experimental data from acetone-water PC-bSSFP experiments
 
