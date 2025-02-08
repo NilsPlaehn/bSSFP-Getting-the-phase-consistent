@@ -1,6 +1,6 @@
 # Phase-cycled bSSFP in two-compartment systems
 **********
-Matlab code to simulate phase-cycled bSSFP profiles of two-compartment systems using different phase descriptions.
+Matlab code to simulate phase-cycled bSSFP profiles of two-compartment systems using different phase descriptions. https://doi.org/10.1002/mrm.30033
 
 **********
 Available codes: 
